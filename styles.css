@@ -1,0 +1,307 @@
+body {
+    font-family: 'Press Start 2P', cursive; /* Use a pixelated font */
+    background-color: #212529;
+    color: #d8e1e9;;
+}
+
+.initial-bg {
+    height: 80px; /* Set desired height */
+    width: 100%; /* Set desired width */
+    object-fit: cover; /* Crop the image to fit the dimensions */
+    position: relative; /* Ensure the container is positioned relatively */
+}
+
+.bot {
+    height: 107px;
+    width: 107px;
+    position: relative; 
+
+
+
+}
+/* Styling for the typing box */
+.typing-box {
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    width: fit-content;
+    position: absolute; /* Position the typing box absolutely */
+    top: 10%; /* Adjust as needed */
+    left: 10%; /* Center horizontally */
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 15px;
+    color: black;
+}
+
+/* Typing animation */
+.typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid black;
+    animation: typing 3s steps(10, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+.project {
+    border: 2px solid #212529;;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #212529;
+    margin-bottom: 1em;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+body {
+    cursor: url('images/download.png'), auto;
+}
+
+/* Example for applying to specific elements */
+.project {
+    border: 2px solid #212529;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    margin-bottom: 1em;
+    cursor: url('images/download.png'), auto;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Change cursor for clickable elements */
+a, button, .clickable {
+    cursor: url('images/download2.png'), pointer;
+}
+
+.nes-btn.is-warning {
+    color: #212529;
+    background-color: #f7d51d;
+    position: relative; /* Ensure the pseudo-element is positioned correctly */
+    border: 5px solid; /* Set a border to apply the border image */
+    border-image-slice: 2;
+    border-image-width: 2;
+    border-image-repeat: stretch;
+    border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+    border-image-outset: 2;
+    display: inline-block;
+    padding: 6px 8px;
+    margin: 4px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.nes-btn.is-warning:after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px #e59400;
+}
+
+.nes-btn.is-warning:hover {
+    color: #212529;
+    text-decoration: none;
+    background-color: #f2c409;
+}
+
+.nes-btn.is-warning:hover:after {
+    box-shadow: inset -6px -6px #e59400;
+}
+
+.nes-btn.is-warning:focus {
+    box-shadow: 0 0 0 6px rgba(229,148,0,.3);
+}
+
+.nes-btn.is-warning:active:not(.is-disabled):after {
+    box-shadow: inset 4px 4px #e59400;
+}
+
+.nes-pointer {
+    cursor: url('images/download2.png'), auto;
+}
+
+.nes-container.is-rounded.with-title > .title {
+    margin-top: -1.5rem;
+}
+
+.nes-container.is-rounded.with-title.is-centered > .title {
+    margin: -1.5rem auto 1rem;
+}
+
+.nes-container.is-rounded.with-title.is-right > .title {
+    margin: -1.5rem 0 1rem auto;
+}
+
+.nes-container.is-rounded.is-dark {
+    border-image-slice: 3;
+    border-image-width: 3;
+    border-image-repeat: stretch;
+    border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg"><path d="M3 1 h1 v1 h-1 z M4 1 h1 v1 h-1 z M2 2 h1 v1 h-1 z M5 2 h1 v1 h-1 z M1 3 h1 v1 h-1 z M6 3 h1 v1 h-1 z M1 4 h1 v1 h-1 z M6 4 h1 v1 h-1 z M2 5 h1 v1 h-1 z M5 5 h1 v1 h-1 z M3 6 h1 v1 h-1 z M4 6 h1 v1 h-1 z" fill="rgb(255,255,255)" /></svg>');
+    border-image-outset: 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) and (-webkit-min-device-pixel-ratio:0), all and (-webkit-min-device-pixel-ratio:0) and (min-resolution:0.001dpcm) {
+    .nes-container.is-rounded.is-dark {
+        border-image-repeat: space;
+    }
+}
+
+@supports (-moz-appearance: meterbar) {
+    .nes-container.is-rounded.is-dark {
+        border-image-repeat: stretch;
+    }
+}
+
+.nes-container.is-rounded.is-dark:after {
+    content: none;
+}
+
+.nes-container.is-rounded.is-dark.with-title > .title {
+    margin-top: -1.3rem;
+}
+
+.nes-container.is-rounded.is-dark.with-title.is-centered > .title {
+    margin: -1.3rem auto 1rem;
+}
+
+.nes-container.is-rounded.is-dark.with-title.is-right > .title {
+    margin: -1.3rem 0 1rem auto;
+}
+
+.fwRPsH {
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(227, 230, 231);
+}
+
+.fwRPsH .image-container {
+    height: 175px;
+    max-width: 100%;
+    border-bottom: 2px solid black;
+    display: flex;
+    padding: 2px;
+    background-color: rgb(235, 235, 235);
+}
+
+.lcQFPf {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    font-family: Inter, sans-serif;
+}
+
+.lcQFPf .tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-flow: wrap;
+}
+@media only screen and (min-width: 768px) {
+    .ccOZgm {
+        width: 230px;
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    .jNoAVC .card-hover-container {
+        width: 230px;
+    }
+}
+
+.card-hover {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card-hover::before {
+    content: '';
+    position: absolute;
+    top: 10px; /* Adjust to control the shadow position */
+    left: 10px; /* Adjust to control the shadow position */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(151, 71, 255);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.2s ease-in-out, left 0.2s ease-in-out;
+}
+
+.card-hover:hover {
+    transform: translate(10px, 10px); /* Move the card */
+}
+
+.card-hover:hover::before {
+    opacity: 1;
+    top: 0;
+    left: 0;
+}
+
+.inter{
+    font-family: 'Inter', sans-serif;
+}
+
+.tech-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.tech-icons i {
+    margin-right: 5px;
+}
+
+.fa-lg{
+    font-size: 1.5em;
+}
+.botz{
+/* Center horizontally */
+    margin-bottom: 10px; /* Adjust as needed */
+    height: 107px;
+    width: 107px;
+  }
+  .typing-boxz {
+    background-color: white;
+    border: 2px solid black;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    position: relative; /* Position the typing box absolutely */
+    top: 10%; /* Adjust as needed */
+    left: 10%; /* Center horizontally */
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 15px;
+    color: black;
+}
+
+.custom-line {
+    width: 100%; /* Set the width of the line */
+    height: 10px; /* Set the thickness */
+    background-color: #9509f2; /* Set the color */
+    margin: 20px 0; /* Optional: Add some margin for spacing */
+  }
+
+
+  .botz {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .botz:hover {
+    transform: scale(1.1); /* Scale the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  }
